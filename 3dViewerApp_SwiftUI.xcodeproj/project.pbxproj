@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7BF133C2B4FFAFB00AAF5A6 /* slide.usdz in Resources */ = {isa = PBXBuildFile; fileRef = B7BF133B2B4FFAFB00AAF5A6 /* slide.usdz */; };
+		B7BF133E2B4FFB6000AAF5A6 /* Viewer3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF133D2B4FFB6000AAF5A6 /* Viewer3d.swift */; };
+		B7BF13402B4FFCF500AAF5A6 /* slide.scn in Resources */ = {isa = PBXBuildFile; fileRef = B7BF133F2B4FFCF500AAF5A6 /* slide.scn */; };
+		B7BF13432B50007A00AAF5A6 /* SceneView3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF13422B50007A00AAF5A6 /* SceneView3d.swift */; };
 		B7FCAB502B4FF71300CFB66A /* _dViewerApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FCAB4F2B4FF71300CFB66A /* _dViewerApp_SwiftUIApp.swift */; };
 		B7FCAB522B4FF71300CFB66A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FCAB512B4FF71300CFB66A /* ContentView.swift */; };
 		B7FCAB542B4FF71500CFB66A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7FCAB532B4FF71500CFB66A /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7BF133B2B4FFAFB00AAF5A6 /* slide.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = slide.usdz; sourceTree = "<group>"; };
+		B7BF133D2B4FFB6000AAF5A6 /* Viewer3d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewer3d.swift; sourceTree = "<group>"; };
+		B7BF133F2B4FFCF500AAF5A6 /* slide.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = slide.scn; sourceTree = "<group>"; };
+		B7BF13422B50007A00AAF5A6 /* SceneView3d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView3d.swift; sourceTree = "<group>"; };
 		B7FCAB4C2B4FF71300CFB66A /* 3dViewerApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3dViewerApp_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FCAB4F2B4FF71300CFB66A /* _dViewerApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _dViewerApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		B7FCAB512B4FF71300CFB66A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,9 +79,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7BF13412B50006900AAF5A6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B7FCAB432B4FF71300CFB66A = {
 			isa = PBXGroup;
 			children = (
+				B7BF133B2B4FFAFB00AAF5A6 /* slide.usdz */,
+				B7BF133F2B4FFCF500AAF5A6 /* slide.scn */,
 				B7FCAB4E2B4FF71300CFB66A /* 3dViewerApp_SwiftUI */,
 				B7FCAB5F2B4FF71600CFB66A /* 3dViewerApp_SwiftUITests */,
 				B7FCAB692B4FF71600CFB66A /* 3dViewerApp_SwiftUIUITests */,
@@ -94,8 +111,11 @@
 		B7FCAB4E2B4FF71300CFB66A /* 3dViewerApp_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B7BF13412B50006900AAF5A6 /* New Group */,
 				B7FCAB4F2B4FF71300CFB66A /* _dViewerApp_SwiftUIApp.swift */,
 				B7FCAB512B4FF71300CFB66A /* ContentView.swift */,
+				B7BF13422B50007A00AAF5A6 /* SceneView3d.swift */,
+				B7BF133D2B4FFB6000AAF5A6 /* Viewer3d.swift */,
 				B7FCAB532B4FF71500CFB66A /* Assets.xcassets */,
 				B7FCAB552B4FF71500CFB66A /* Preview Content */,
 			);
@@ -231,6 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BF13402B4FFCF500AAF5A6 /* slide.scn in Resources */,
+				B7BF133C2B4FFAFB00AAF5A6 /* slide.usdz in Resources */,
 				B7FCAB572B4FF71500CFB66A /* Preview Assets.xcassets in Resources */,
 				B7FCAB542B4FF71500CFB66A /* Assets.xcassets in Resources */,
 			);
@@ -257,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BF13432B50007A00AAF5A6 /* SceneView3d.swift in Sources */,
+				B7BF133E2B4FFB6000AAF5A6 /* Viewer3d.swift in Sources */,
 				B7FCAB522B4FF71300CFB66A /* ContentView.swift in Sources */,
 				B7FCAB502B4FF71300CFB66A /* _dViewerApp_SwiftUIApp.swift in Sources */,
 			);
@@ -347,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
