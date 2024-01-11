@@ -14,6 +14,9 @@ struct SceneView3d: View {
     //MARK: - View Properties
     @State var isVerticalLook: Bool = false
     @GestureState var offset: CGFloat = 0
+    //MARK: - Custom Properties
+    @State var isSliderInUse: Bool = false
+    @State var degrees: CGFloat = 0.0
     
     var body: some View {
         VStack {
@@ -26,6 +29,22 @@ struct SceneView3d: View {
                 .zIndex(-10)
             
             CustomSlider()
+            
+            //MARK: - Custom Part
+            Slider(value: $degrees, in: 0...3.15)
+                .frame(width: 200)
+                .onChange(of: degrees) { newValue in
+                   rotate3DModelBySlider()
+                }
+            
+            HStack(spacing: 0) {
+                Button {
+                    rotate3DmodelByButton()
+                } label: {
+                    Text("Turn around 3D model")
+                }
+            }
+            .padding()
         }
         .preferredColorScheme(.dark)
         .padding()
@@ -119,7 +138,6 @@ struct SceneView3d: View {
     
     //MARK: - Rotating 3d model
     func roatate3dModel(animate: Bool = false) {
-        
         if animate {
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.4
@@ -127,14 +145,38 @@ struct SceneView3d: View {
         
         let newAngle = (offset * .pi) / 180
         if isVerticalLook {
-            scene?.rootNode.eulerAngles.x = Float(newAngle)
+            scene?.rootNode.eulerAngles.y = Float(newAngle)
         }
         else {
-            scene?.rootNode.eulerAngles.y = Float(newAngle)
+            scene?.rootNode.eulerAngles.x = Float(newAngle)
         }
         
         if animate {
             SCNTransaction.commit()
+        }
+    }
+    
+    //MARK: - Custom - Rotating 3d model via Slider
+    func rotate3DModelBySlider() {
+        isSliderInUse = true
+        
+        if isSliderInUse {
+            if isVerticalLook {
+                scene?.rootNode.eulerAngles.y = Float(degrees)
+            }
+            else {
+                scene?.rootNode.eulerAngles.x = Float(degrees)
+            }
+        }
+    }
+    
+    //MARK: Custom - - Rotating 3d model via Button
+    func rotate3DmodelByButton() {
+        if scene?.rootNode.eulerAngles.y == 0 {
+            scene?.rootNode.eulerAngles.y = Float(3.15)
+        }
+        else {
+            scene?.rootNode.eulerAngles.y = Float(0)
         }
     }
 }
