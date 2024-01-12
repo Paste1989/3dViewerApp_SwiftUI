@@ -12,8 +12,10 @@
 		B7BF13402B4FFCF500AAF5A6 /* slide.scn in Resources */ = {isa = PBXBuildFile; fileRef = B7BF133F2B4FFCF500AAF5A6 /* slide.scn */; };
 		B7BF13432B50007A00AAF5A6 /* SceneView3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF13422B50007A00AAF5A6 /* SceneView3d.swift */; };
 		B7BF13452B50309C00AAF5A6 /* bulb.obj in Resources */ = {isa = PBXBuildFile; fileRef = B7BF13442B50309C00AAF5A6 /* bulb.obj */; };
-		B7BF13472B5030AB00AAF5A6 /* bulb.scn in Resources */ = {isa = PBXBuildFile; fileRef = B7BF13462B5030AB00AAF5A6 /* bulb.scn */; };
+		B7BF13472B5030AB00AAF5A6 /* bulb_top.scn in Resources */ = {isa = PBXBuildFile; fileRef = B7BF13462B5030AB00AAF5A6 /* bulb_top.scn */; };
 		B7BF134A2B50352500AAF5A6 /* TapGestureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF13492B50352500AAF5A6 /* TapGestureService.swift */; };
+		B7BF134D2B512F2A00AAF5A6 /* bulb1.obj in Resources */ = {isa = PBXBuildFile; fileRef = B7BF134C2B512F2A00AAF5A6 /* bulb1.obj */; };
+		B7BF134F2B512F3200AAF5A6 /* bulb_bottom.scn in Resources */ = {isa = PBXBuildFile; fileRef = B7BF134E2B512F3200AAF5A6 /* bulb_bottom.scn */; };
 		B7FCAB502B4FF71300CFB66A /* Viewer3DApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FCAB4F2B4FF71300CFB66A /* Viewer3DApp_SwiftUIApp.swift */; };
 		B7FCAB522B4FF71300CFB66A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FCAB512B4FF71300CFB66A /* ContentView.swift */; };
 		B7FCAB542B4FF71500CFB66A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7FCAB532B4FF71500CFB66A /* Assets.xcassets */; };
@@ -46,8 +48,10 @@
 		B7BF133F2B4FFCF500AAF5A6 /* slide.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = slide.scn; sourceTree = "<group>"; };
 		B7BF13422B50007A00AAF5A6 /* SceneView3d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView3d.swift; sourceTree = "<group>"; };
 		B7BF13442B50309C00AAF5A6 /* bulb.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = bulb.obj; sourceTree = "<group>"; };
-		B7BF13462B5030AB00AAF5A6 /* bulb.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = bulb.scn; sourceTree = "<group>"; };
+		B7BF13462B5030AB00AAF5A6 /* bulb_top.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = bulb_top.scn; sourceTree = "<group>"; };
 		B7BF13492B50352500AAF5A6 /* TapGestureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureService.swift; sourceTree = "<group>"; };
+		B7BF134C2B512F2A00AAF5A6 /* bulb1.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = bulb1.obj; sourceTree = "<group>"; };
+		B7BF134E2B512F3200AAF5A6 /* bulb_bottom.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = bulb_bottom.scn; sourceTree = "<group>"; };
 		B7FCAB4C2B4FF71300CFB66A /* 3dViewerApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3dViewerApp_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FCAB4F2B4FF71300CFB66A /* Viewer3DApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewer3DApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		B7FCAB512B4FF71300CFB66A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,10 +118,12 @@
 		B7FCAB432B4FF71300CFB66A = {
 			isa = PBXGroup;
 			children = (
+				B7BF134C2B512F2A00AAF5A6 /* bulb1.obj */,
 				B7BF13442B50309C00AAF5A6 /* bulb.obj */,
 				B7BF133B2B4FFAFB00AAF5A6 /* slide.usdz */,
 				B7BF133F2B4FFCF500AAF5A6 /* slide.scn */,
-				B7BF13462B5030AB00AAF5A6 /* bulb.scn */,
+				B7BF13462B5030AB00AAF5A6 /* bulb_top.scn */,
+				B7BF134E2B512F3200AAF5A6 /* bulb_bottom.scn */,
 				B7FCAB4E2B4FF71300CFB66A /* 3dViewerApp_SwiftUI */,
 				B7FCAB5F2B4FF71600CFB66A /* 3dViewerApp_SwiftUITests */,
 				B7FCAB692B4FF71600CFB66A /* 3dViewerApp_SwiftUIUITests */,
@@ -276,12 +282,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BF134D2B512F2A00AAF5A6 /* bulb1.obj in Resources */,
+				B7BF134F2B512F3200AAF5A6 /* bulb_bottom.scn in Resources */,
 				B7BF13452B50309C00AAF5A6 /* bulb.obj in Resources */,
 				B7BF13402B4FFCF500AAF5A6 /* slide.scn in Resources */,
 				B7BF133C2B4FFAFB00AAF5A6 /* slide.usdz in Resources */,
 				B7FCAB572B4FF71500CFB66A /* Preview Assets.xcassets in Resources */,
 				B7FCAB542B4FF71500CFB66A /* Assets.xcassets in Resources */,
-				B7BF13472B5030AB00AAF5A6 /* bulb.scn in Resources */,
+				B7BF13472B5030AB00AAF5A6 /* bulb_top.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

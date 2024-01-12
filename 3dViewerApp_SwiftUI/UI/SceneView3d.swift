@@ -32,8 +32,20 @@ struct SceneView3d: View {
                 .zIndex(-10)
                 .onTapGesture {
                     // Handle tap gestures here if needed
+                   
                 }
-            
+//                .gesture(
+//                    DragGesture(minimumDistance: 20)
+//                        .onEnded { value in
+//                            if degrees == 0 {
+//                                withAnimation(.easeInOut) { degrees = 3.15 }
+//                            }
+//                            else {
+//                                withAnimation(.easeInOut) { degrees = 0 }
+//                            }
+//                        }
+//                )
+                
             CustomSlider()
             
             //MARK: - Custom Part
@@ -82,7 +94,7 @@ struct SceneView3d: View {
                 Image(systemName: "arrow.left.and.right.righttriangle.left.righttriangle.right.fill")
                     .font(.system(size: 16, weight: .heavy))
                     .foregroundColor(.white)
-                    .rotationEffect(.init(degrees: isVerticalLook ? 0 : 90))
+                    .rotationEffect(.init(degrees: isVerticalLook ? 90 : 0))
                     .frame(width: 42, height: 42)
                     .background {
                         RoundedRectangle(cornerRadius: 15, style: .continuous).fill(.white.opacity(0.2))
@@ -151,10 +163,10 @@ struct SceneView3d: View {
         
         let newAngle = (offset * .pi) / 180
         if isVerticalLook {
-            scene?.rootNode.eulerAngles.y = Float(newAngle)
+            scene?.rootNode.eulerAngles.x = Float(newAngle)
         }
         else {
-            scene?.rootNode.eulerAngles.x = Float(newAngle)
+            scene?.rootNode.eulerAngles.y = Float(newAngle)
         }
         
         if animate {
@@ -168,10 +180,10 @@ struct SceneView3d: View {
         
         if isSliderInUse {
             if isVerticalLook {
-                scene?.rootNode.eulerAngles.y = Float(degrees)
+                scene?.rootNode.eulerAngles.x = Float(degrees)
             }
             else {
-                scene?.rootNode.eulerAngles.x = Float(degrees)
+                scene?.rootNode.eulerAngles.y = Float(degrees)
             }
         }
     }
@@ -180,9 +192,11 @@ struct SceneView3d: View {
     func rotate3DmodelByButton() {
         if scene?.rootNode.eulerAngles.y == 0 {
             scene?.rootNode.eulerAngles.y = Float(3.15)
+            degrees = 3.15
         }
         else {
             scene?.rootNode.eulerAngles.y = Float(0)
+            degrees = 0
         }
     }
 }

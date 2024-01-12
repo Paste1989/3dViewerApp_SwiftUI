@@ -20,6 +20,7 @@ struct Viewer3d: UIViewRepresentable {
         view.scene = scene
         view.backgroundColor = .clear
         view.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(context.coordinator.handleTap(_:))))
+        
         return view
     }
     
